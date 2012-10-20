@@ -7,8 +7,10 @@ import java.io.FileOutputStream;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -62,7 +64,8 @@ public class MainActivity extends Activity {
         // searchButton
         final Button searchButton = (Button)findViewById(R.id.buttonSearch);  
         searchButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {    	    			
+            @Override
+			public void onClick(View v) {    	    			
     			if (isNotNullNotEmptyNotWhiteSpaceOnlyByJava(autoCom.getText().toString())){
     				String arrData[] = myDb.SearchWord(autoCom.getText().toString());
     				if (arrData!=null) {
@@ -120,9 +123,31 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.activity_main, menu);
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        
         return true;
     }
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		
+		switch (item.getItemId()) {
+		case R.id.menu_updatedb :
+			Log.d("MENU","select menu update");
+			Intent newActivity = new Intent(MainActivity.this,UpdateActivity.class);
+			startActivity(newActivity);
+		case R.id.menu_settings :
+			Log.d("MENU","select menu setting");
+			Intent newActivity2 = new Intent(MainActivity.this,AboutActivity.class);
+			startActivity(newActivity2);
+		default :
+			return super.onOptionsItemSelected(item);
+		} 
+		
+		
+	}
+
     
  
  
