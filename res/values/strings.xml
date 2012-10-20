@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Krean Dict</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">ตั้งค่า</string>
+    <string name="title_activity_main">พจนานุเกรียน</string>
+    <string name="menu_updatedb">อัพเดท</string>
+    <string name="text_hints">ใส่คำศัพท์ที่นี่</string>
+    <string name="result_title">หมายถึง</string>
+    <string name="button_search">ค้นหา</string>
+    <string name="button_search_react">ค้นหาคำ</string>
+    <string name="button_close">ปิด</string>
+    <string name="text_empty">กรุณากรอกข้อมูล</string>
+    <string name="text_alert">แจ้งเตือน</string>
+    <string name="text_data_notfound">ไม่พบข้อมูล กรุณาลองใหม่อีกครั้ง</string>
+
+</resources>
