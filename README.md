@@ -1,0 +1,4 @@
+kreandict
+=========
+
+Krean Dictionary
