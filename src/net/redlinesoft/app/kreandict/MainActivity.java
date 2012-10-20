@@ -137,13 +137,15 @@ public class MainActivity extends Activity {
 			Log.d("MENU","select menu update");
 			Intent newActivity = new Intent(MainActivity.this,UpdateActivity.class);
 			startActivity(newActivity);
+			break;
 		case R.id.menu_settings :
 			Log.d("MENU","select menu setting");
 			Intent newActivity2 = new Intent(MainActivity.this,AboutActivity.class);
 			startActivity(newActivity2);
-		default :
-			return super.onOptionsItemSelected(item);
-		} 
+			break;
+
+		}
+		return false; 
 		
 		
 	}
