@@ -52,7 +52,7 @@ public class UpdateActivity extends Activity {
 
     private void startDownload() {
         // editText1
-        txtURL = "https://github.com/anoochit/kreandict/blob/master/teenword.db?raw=true";
+    	txtURL = "https://github.com/anoochit/kreandict/blob/master/teenword.db?raw=true";
         URLDownload = txtURL.toString();
         new DownloadFileAsync().execute(URLDownload);
     }
