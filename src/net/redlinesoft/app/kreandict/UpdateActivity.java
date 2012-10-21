@@ -61,7 +61,7 @@ public class UpdateActivity extends Activity {
         switch (id) {
         case DIALOG_DOWNLOAD_PROGRESS:
             mProgressDialog = new ProgressDialog(this);
-            mProgressDialog.setMessage("Downloading file..");
+            mProgressDialog.setMessage("กำลังดาวน์โหลด...");
             mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             mProgressDialog.setCancelable(false);
             mProgressDialog.show();
@@ -142,7 +142,9 @@ class DownloadFileAsync extends AsyncTask<String, String, String> {
 	        moveDB();
 	        finish();
 	        
-	    } catch (Exception e) {}
+	    } catch (Exception e) {
+	    	finish();	    	
+	    }
 		
 	    return null;
 
