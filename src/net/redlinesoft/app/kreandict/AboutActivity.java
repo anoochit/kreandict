@@ -16,6 +16,7 @@ public class AboutActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         
+        final DatabaseHandler myDb = new DatabaseHandler(this);
        
         PackageInfo pInfo = null;
 		try {
@@ -26,6 +27,10 @@ public class AboutActivity extends Activity {
 			e.printStackTrace();
 		}
         String version = pInfo.versionName;
+        
+        String totalWord = String.valueOf(myDb.getTotalRow());
+        TextView textTotalWord = (TextView)findViewById(R.id.textTotalWord);
+        textTotalWord.setText("จำนวนคำศัพท์ " + totalWord + " คำ");
     
         TextView textVersion = (TextView)findViewById(R.id.textVersion); 
         textVersion.setText("รุ่น " + version);

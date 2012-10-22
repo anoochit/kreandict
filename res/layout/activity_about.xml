@@ -25,22 +25,32 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textVersionCode"
+        android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textVersion"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="90dp"
+        android:text="Copyright (c) 2012 RedLine Software." />
+
+    <TextView
+        android:id="@+id/textVersionCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
         android:text="General Public License 3.0"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/textTotalWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textVersionCode"
+        android:layout_above="@+id/textVersionCode"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Copyright (c) 2012 RedLine Software." />
+        android:layout_marginBottom="18dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

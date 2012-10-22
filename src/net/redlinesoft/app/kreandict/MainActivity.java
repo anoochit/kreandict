@@ -61,32 +61,31 @@ public class MainActivity extends Activity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line, myData);
 		autoCom.setAdapter(adapter);
                        
-        // searchButton
-        final Button searchButton = (Button)findViewById(R.id.buttonSearch);  
-        searchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-			public void onClick(View v) {    	    			
-    			if (isNotNullNotEmptyNotWhiteSpaceOnlyByJava(autoCom.getText().toString())){
-    				String arrData[] = myDb.SearchWord(autoCom.getText().toString());
-    				if (arrData!=null) {
-    					TextView titleText = (TextView)findViewById(R.id.textMeaningTitle);
-    					titleText.setText(R.string.result_title);
-    					TextView textMeaning = (TextView)findViewById(R.id.textMeaningText);
-    					textMeaning.setText(arrData[2]);
-    				} else {
-    					dDialog.setTitle(R.string.text_alert);
-            			dDialog.setIcon(android.R.drawable.ic_dialog_alert);
-                    	dDialog.setMessage(R.string.text_data_notfound);
-            			dDialog.setPositiveButton(R.string.button_close, null);
-            			dDialog.show();    	
-            			clearTextResult();
-    				}
+		// searchButton
+		final Button searchButton = (Button) findViewById(R.id.buttonSearch);
+		searchButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (isNotNullNotEmptyNotWhiteSpaceOnlyByJava(autoCom.getText().toString())) {
+					String arrData[] = myDb.SearchWord(autoCom.getText().toString());
+					if (arrData != null) {
+						TextView titleText = (TextView) findViewById(R.id.textMeaningTitle);
+						titleText.setText(arrData[1] + " " + getString(R.string.result_title));
+						TextView textMeaning = (TextView) findViewById(R.id.textMeaningText);
+						textMeaning.setText(arrData[2]);
+					} else {
+						dDialog.setTitle(R.string.text_alert);
+						dDialog.setIcon(android.R.drawable.ic_dialog_alert);
+						dDialog.setMessage(R.string.text_data_notfound);
+						dDialog.setPositiveButton(R.string.button_close, null);
+						dDialog.show();
+						clearTextResult();
+					}
 
-    			} else {
-        			clearTextResult();
-    			}
-            }
-        });    
+				} else {
+					clearTextResult();
+				}
+			}
+		});
         
     }
     
