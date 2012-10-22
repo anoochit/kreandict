@@ -1,28 +1,28 @@
 package net.redlinesoft.app.kreandict;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+public class DatabaseHandler extends SQLiteOpenHelper {
 
-public class DatabaseHandler extends SQLiteOpenHelper  {
-
-	
 	public DatabaseHandler(Context context) {
-        super(context, context.getExternalFilesDir(null).getAbsolutePath() + "/" + "teenword.db", null, 1);
-    }
+		super(context, context.getExternalFilesDir(null).getAbsolutePath()
+				+ "/" + "teenword.db", null, 1);
+	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		db.execSQL("CREATE TABLE IF NOT EXISTS words (id INTEGER PRIMARY KEY, word STRING, meaning STRING)");
-		Log.d("DB","Create Table Successfully.");
+		Log.d("DB", "Create Table Successfully.");
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
 	}
 
 	public String[] SelectAllData() {
@@ -105,6 +105,5 @@ public class DatabaseHandler extends SQLiteOpenHelper  {
 			return 0;
 		}
 	}
- 
 
 }

@@ -19,9 +19,10 @@
         android:layout_alignBottom="@+id/buttonSearch"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@+id/buttonSearch"
+        android:completionThreshold="1"
         android:ems="10"
-        android:hint="@string/text_hints" 
-        android:completionThreshold="1">
+        android:hint="@string/text_hints" >
+
         <requestFocus />
     </AutoCompleteTextView>
 
@@ -33,6 +34,7 @@
         android:layout_below="@+id/autoCompleteText"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="bold" />
 
     <TextView
@@ -44,6 +46,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="normal" />
 
     <LinearLayout

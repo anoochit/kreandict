@@ -2,11 +2,11 @@ package net.redlinesoft.app.kreandict;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Context;
+ 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.view.Menu;
-import android.widget.Button;
+ 
 import android.widget.TextView;
 
 public class AboutActivity extends Activity {
