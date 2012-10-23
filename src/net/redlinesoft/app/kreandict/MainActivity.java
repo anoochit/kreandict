@@ -4,6 +4,8 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.Arrays;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -40,7 +42,7 @@ public class MainActivity extends Activity {
 
 		final DatabaseHandler myDb = new DatabaseHandler(this);
 
-		// alertdialog
+		// alert dialog
 		final AlertDialog.Builder dDialog = new AlertDialog.Builder(this);
 
 		// write database if not exist
@@ -57,9 +59,11 @@ public class MainActivity extends Activity {
 
 		// AutoCompleteText
 		final String[] myData = myDb.SelectAllData();
+		// Sort
+		Arrays.sort(myData);
 		final AutoCompleteTextView autoCom = (AutoCompleteTextView) findViewById(R.id.autoCompleteText);
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_dropdown_item_1line, myData);
+				android.R.layout.simple_dropdown_item_1line,myData);
 		autoCom.setAdapter(adapter);
 
 		// searchButton
