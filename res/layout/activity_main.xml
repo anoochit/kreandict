@@ -5,12 +5,12 @@
 
     <Button
         android:id="@+id/buttonSearch"
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="@string/button_search" />
+        android:text="@string/button_search"
+    />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteText"
@@ -57,5 +57,16 @@
         android:layout_alignParentLeft="true"
         android:orientation="vertical" >
     </LinearLayout>
+
+    <Button
+        android:id="@+id/bottonSpeak"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textMeaningText"
+        android:layout_alignTop="@+id/textMeaningTitle"
+        android:minHeight="20dip"
+        android:text="@string/button_speak"
+        android:visibility="invisible" />
 
 </RelativeLayout>

@@ -15,5 +15,10 @@
     <string name="text_data_notfound">ไม่พบข้อมูล กรุณาลองใหม่อีกครั้ง</string>
     <string name="title_activity_update">อัพเดทฐานข้อมูล</string>
     <string name="title_activity_about">เกี่ยวกับ</string>
-
+    <string name="button_speak">พูด</string>
+    <string name="text_title_install_tts">ติดตั้งโปรแกรมเสริม</string>
+    <string name="text_install_tts">ไม่พบ Vaja TTS Engine ติดตั้งเพิ่มเติม</string>
+	<string name="button_yes">ใช่</string>
+	<string name="button_no">ไม่ใช่</string>
+	
 </resources>
